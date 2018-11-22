@@ -1,0 +1,66 @@
+
+	function popup(title,content,imgSrc,leftBtn,rightBtn,url){
+
+		if(!arguments[1]) content = ''
+		if(!arguments[2]) imgSrc = '';
+		if(!arguments[3]) leftBtn = '';
+		if(!arguments[4]) rightBtn = '';
+		if(!arguments[5]) url = '';
+        $(document.body).append('<div id="popupWrapper"></div>');
+        $("#popupWrapper").html("");
+
+		$('#popupWrapper').append(
+			'<div id="si_popup">'+
+			'	<div class="title">'+title+'</div>');
+		if(content != ''){
+			$('#si_popup').append('	<div class="content">'+content+'</div>');
+
+		}
+		if(imgSrc != ''){
+			$('#si_popup').append('	<div class="picture"><img src="'+imgSrc+'"/></div>');
+
+		}
+
+		if(leftBtn != '' || rightBtn !=''){
+			$('#si_popup').append('	<div class="btn">');
+			if(leftBtn != ''){
+				$('.btn').append('		<input type="submit" id="leftBtn" name="" value="'+leftBtn+'"/>');
+			}
+			if(rightBtn != ''){
+					$('.btn').append('		<input type="submit" id="rightBtn" name="" value="'+rightBtn+'"/>');
+					$('#leftBtn').css({"margin-right":"1.5rem"})
+			}
+			$('#si_popup').append('	</div>');
+		}
+
+		$('#si_popup').append(	'</div>');
+
+		//点击确定
+		if(url != ''){
+			$('#leftBtn').click(function(){
+				window.location.href = url;
+            })
+		}
+		//点击否
+		$('#rightBtn').click(function(){
+            $('#popupWrapper').hide();
+            $('#si_popup').remove();
+            window.location.reload();
+
+        })
+
+
+        //计算定位位置
+        var $screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        $('#popupWrapper').css({
+            "height":$screenHeight
+        });
+        console.log("$screenHeight:" + $screenHeight);
+
+        var $popupHeight = $('#si_popup').outerHeight();
+
+        $('#si_popup').css({
+            "margin-top":-($popupHeight/2)+'px'
+        });
+	$("#popupWrapper").show();
+	}
