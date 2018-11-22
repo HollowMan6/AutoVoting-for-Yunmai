@@ -1,4 +1,4 @@
-# AutoVoting-for-Yunmai
+# Auto Voting for Yunmai
 
 English Version.(中文版本请下拉)
 
