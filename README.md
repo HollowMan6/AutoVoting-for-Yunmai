@@ -1,6 +1,6 @@
 # AutoVoting-for-Yunmai
-######go down if you want to see the Chinese simplified version.
-######中文版本请下拉
+###go down if you want to see the Chinese simplified version.
+###中文版本请下拉
 ##0x01:Introduction
 I have coded an AutoVoting program, giving you a chance to be the most popular on YUNMAI VOTING（云麦投票） 
 
@@ -23,7 +23,7 @@ The Voting System is really simple and stupid, because they even don't detect th
  It turns out to be a success!
 ## 0x03:Result
 That night and next day, I kept voting for myself untill the afternoon, when I found that all my vote was gone. Then I asked the Customer Service.
-![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm.png)
+![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm.png);
 ![](mmexport1542795832683.jpg)
 
 The pictures shows the chat，it turned out to be the pace of the voting that makes them realized the abnormal. The funny thing is that, they thought I buy the voters on Tabao, but the truth is that I vote myself all by my program. HA HA HA......:)
@@ -31,7 +31,8 @@ The pictures shows the chat，it turned out to be the pace of the voting that ma
 When I followed her instruction to click into the number 1's voting page, who has votes of over 5000, I thought that they hire a lot of people to vote her on Tabao originally, tt really shocked me a lot.There is a link to buy the votes with money officially! and 666 votes cost 100 yuan.The voting system turned out to be a place to show off their whealth! I was disappointed with this competition from then on and decided to give up continue to take part in this activity.
 
 ## PS
-[The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html)
+[The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html);
+
 [My Program Source Code](AutoVoting-for-Yunmai.py)
 
 #云麦投票系统自动刷票程序
@@ -67,5 +68,6 @@ When I followed her instruction to click into the number 1's voting page, who ha
 然后，我按她的指示点进了那个第一名的投票页面，她的票超过5000个，我本认为他在淘宝买了刷票的，然而，原来是不停的有人赠送礼物（666票100元）,本来正常的比赛，硬生生地变成了用钱砸出来的奖。从那时起我对这场比赛感到失望，并决定放弃继续参加这项活动。
 
 ## 0x04 附录
-[投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
+[投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html);
+
 [程序源代码](AutoVoting-for-Yunmai.py)
