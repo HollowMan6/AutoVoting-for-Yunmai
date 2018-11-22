@@ -36,16 +36,6 @@ When I followed her instruction to click into the number 1's voting page, who ha
 
 [My Program Source Code](AutoVoting-for-Yunmai.py)
 
-
-
-
-
-
-
-
-
-
-
 云麦投票系统自动刷票程序
 
 中文版本。
