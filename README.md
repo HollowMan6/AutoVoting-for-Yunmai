@@ -52,8 +52,8 @@ The Voting System is really simple and stupid, because they even don't detect th
 
 That night and next day, I kept voting for myself untill the afternoon, when I found that all my vote was gone. Then I asked the Customer Service.
 
-![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm.png);
-![](mmexport1542795832683.jpg)
+![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm-en.png);
+![](mmexport1542795832683-en.jpg)
 
 The pictures shows the chat，it turned out to be the pace of the voting that makes them realized the abnormal. The funny thing is that, they thought I buy the voters on Tabao, but the truth is that I vote myself all by my program. HA HA HA...... :)
 
