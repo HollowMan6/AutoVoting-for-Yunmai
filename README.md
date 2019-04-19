@@ -36,7 +36,29 @@ When I followed her instruction to click into the number 1's voting page, who ha
 
 [My Program Source Code](AutoVoting-for-Yunmai.py)
 
-云麦投票系统自动刷票程序
+## 0x05:Latest News!
+
+Extended papers on this project have finally been published! Written independently by myself, this paper presents an original solution to the real security of voting - "Voting System Based on Wechat Pay", which is published in Volume 40, No. 3, page 118-121, at "COMPUTER ENGINEERING & SOFTWARE" journal.
+
+**Classification number: TP309.2**
+
+**Document identification code: A**
+
+**DOI: 10.3969/j.issn.1003-6970.2019.03.022**
+
+**Citation Format: 蒋嵩林. 基于微信支付平台的在线投票系统[J]. 软件, 2019, 40 (3) : 118-121**
+
+Welcome for your citation!
+
+***Introduction of "COMPUTER ENGINEERING & SOFTWARE" journal***
+
+*"COMPUTER ENGINEERING & SOFTWARE" journal is managed by the Chinese Association of Science and Technology and sponsored by the China Electronics Society. It has a long history of publishing excellent scientific and technological journals at home and abroad. It was founded in 1979. It is the first Chinese core journal in China. China International Book Trading Corporation Code : CN12-1151/TP. ISSN 1003-6970. M8992, is the code for international publishing approved by the General Administration of Press and Publication. Meanwhile, the only CD-ROM edition of Software magazine in China is CN12-9203/TP. Software magazine is included in Chinese Academic Journal Comprehensive Evaluation Database Statistical Source Journal, Chinese Core Journal (Selection) Database, Chinese Journal Full Text Database and Chinese Science and Technology Journal Database (Full Text Edition) by domestic and foreign databases.*
+
+***（2018）Impact factor ：1.038***
+
+*[Publisher's HomePage](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
+
+# 云麦投票系统自动刷票程序
 
 中文版本。
 
@@ -75,3 +97,26 @@ When I followed her instruction to click into the number 1's voting page, who ha
 [投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
 
 [程序源代码](AutoVoting-for-Yunmai.py)
+
+## 0x05:最新消息！
+
+关于此项目的引申论文终于发表出版了！本论文由本人独立撰写，提出了关于投票真实安全问题的独创解决方案——“基于微信支付平台的在线投票系统”，发表于《软件》杂志第40卷第3期118-121页。
+
+**分类号: TP309.2**
+
+**文献标识码: A**
+
+**DOI: 10.3969/j.issn.1003-6970.2019.03.022**
+
+**著录格式: 蒋嵩林. 基于微信支付平台的在线投票系统[J]. 软件, 2019, 40 (3) : 118-121**
+
+欢迎引用！
+
+***《软件》杂志介绍***
+
+*《软件》杂志由中国科协主管，中国电子学会主办国内国际发行优秀科技期刊，创刊历史悠久，1979年创刊。系中国首届中文核心期刊。国家新闻出版总署批准国内标准刊号：CN12-1151/TP，国际统一刊号：ISSN1003-6970，中国国际图书贸易总公司国外发行，国外发行代号：M8992。同时国内唯一《软件》杂志光盘版刊号：CN12-9203/TP。《软件》杂志被国内外数据库收录《中国学术期刊综合评价数据库统计源期刊》、《中国核心期刊（遴选）数据库收录期刊》、《中国期刊全文数据库》、《中文科技期刊数据库（全文版）收录期刊》。*
+
+***（2018）影响因子：1.038***
+
+
+*[杂志社主页](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
