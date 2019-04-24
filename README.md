@@ -61,11 +61,17 @@ When I followed her instruction to click into the number 1's voting page, who ha
 
 On 6th April,2019 , I add an optional funtion --- multithreading.
 
+On 25th April,2019 , I fixed some bugs, add Program with UI version.
+
 ## 0x04:PS
 
 [The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html)
 
 [My Program Source Code](AutoVoting-for-Yunmai.py)
+
+[My Program with UI Source Code](AutoVoting-for-Yunmai-with-UI.py)
+
+[Win UI exe](AutoVoting-for-Yunmai-with-UI.exe)
 
 # 云麦投票系统自动刷票程序
 
@@ -129,7 +135,13 @@ On 6th April,2019 , I add an optional funtion --- multithreading.
 
 2019年4月6日，我向程序中添加了可选功能——多线程。
 
+2019年4月25日，修复一些错误。添加 UI 界面版程序。
+
 ## 0x04 附录
 [投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
 
 [程序源代码](AutoVoting-for-Yunmai.py)
+
+[UI版程序源代码](AutoVoting-for-Yunmai-with-UI.py)
+
+[Win UI程序](AutoVoting-for-Yunmai-with-UI.exe)

@@ -26,7 +26,11 @@ import threading
 
 # 初始化计数变量 Initialization count variable
 count = 0
+ind=False
 
+# 随机屏幕大小 Random Screen Size 
+hlist=['640','800','1024','1400','1600','2048','800','1024','1280','1440','1680','1920','2056','960','1280','1366','1920','2560']
+wlist=['480','600','768','1050','1200','1536','480','600','800','900','1050','1200','1600','540','720','768','1080','1440']
 
 def vote():
     global count
@@ -83,10 +87,11 @@ def vote():
             verify=False).text[-9:-2].replace(",", '')
 
         # 投票 Voting
+        n=random.randint(0,17)
         post2 = {
             'aid': aid,
-            "width": '794',
-            "height": '858',
+            "width": wlist[n],
+            "height": hlist[n],
             'id': id,
             'wechatid': user,
             'orther_id': openid,
@@ -113,12 +118,15 @@ def vote():
         elif vote == '3':
             print("投票速度过快，已被系统禁止投票，请稍后再试！")
             # Translation: The voting speed is too fast and has been banned from voting by the system. Please try again later!
+            ind=True
         elif vote == '4':
             print("验证码错误！请检查获取验证码部分代码！")
             # Translation: Verification code error! Please check the code of getting the verification code!
+            ind=True
         else:
             print("抱歉，现在不能投票！")
             # Translation: Sorry, can't vote now!
+            ind=True
         '''
         threadmax.release()
         '''
@@ -127,6 +135,9 @@ def vote():
         time.sleep(random.normalvariate(13.5, 3))
 
     except Exception:
+        '''
+        threadmax.release()
+        '''
         pass
 
 
@@ -137,7 +148,9 @@ def vote():
 threadmax = threading.BoundedSemaphore(128)
 
 l = []
-for i in range(30000):
+while True:
+    if ind==True:
+        break
     # 增加信号量，可用信号量减一 Increase the semaphore and subtract one from the semaphore
     threadmax.acquire()
     t = threading.Thread(target=vote)
@@ -146,6 +159,9 @@ for i in range(30000):
 for t in l:
     t.join()
 '''
-vote()
+while True:
+    if ind==True:
+        break
+    vote()
 # 要使用多线程投票，请将121-147行的'''删去，并将此注释上一行的vote()也删去
 # To use multithreaded voting, delete'''in lines 122-148 and vote () in the previous line of this comment
