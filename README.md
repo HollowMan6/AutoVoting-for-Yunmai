@@ -135,7 +135,9 @@ On 25th April,2019 , I fixed some bugs, add Program with UI version.
 
 2019年4月6日，我向程序中添加了可选功能——多线程。
 
-2019年4月25日，修复一些错误。添加 UI 界面版程序。
+2019年4月25日，修复一些错误。添加 UI 界面版程序:
+
+![](UI-pic.PNG)
 
 ## 0x04 附录
 [投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
