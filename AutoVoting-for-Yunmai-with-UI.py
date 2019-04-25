@@ -138,26 +138,12 @@ def vote(host, aid, id, php):
                     tkinter.messagebox .showerror(
                         '错误', '投票速度过快，已被系统禁止投票，请稍后再试！', parent=root)
             elif vote == '4':
-                if quest == False and mul == False:
-                    quest = True
-                    flag = False
-                    ind = True
-                    tkinter.messagebox .showerror(
-                        '错误', '验证码错误！(多线程情况下此错误正常！)', parent=root)
-                elif quest == False:
-                    T.insert(tk.END, "验证码错误！(多线程情况下此错误正常！)\n")
-                    # Translation: Verification code error!
+                T.insert(tk.END, "验证码错误！(网络拥堵情况下此错误正常！)\n")
+                # Translation: Verification code error!
                     
             else:
-                if quest == False and mul == False:
-                    quest = True
-                    flag = False
-                    ind = True
-                    tkinter.messagebox .showerror(
-                        '错误', '抱歉，不能投票！(可能为网络问题)', parent=root)
-                elif quest == False:
-                    T.insert(tk.END, "抱歉，不能投票！(可能为网络问题)\n")
-                    # Translation: Sorry, can't vote!
+                T.insert(tk.END, "抱歉，不能投票！(可能为网络问题)\n")
+                # Translation: Sorry, can't vote!
             if mul == True:
                 threadmax.release()
 
@@ -218,6 +204,8 @@ def run():
     sphp = ephp.get()
     if shost == "":
         tkinter.messagebox .showerror('错误', '请设定投票网站！', parent=root)
+    elif sphp == "":
+        tkinter.messagebox .showerror('错误', '请设置php页面！', parent=root)
     elif said == "":
         tkinter.messagebox .showerror('错误', '请设置aid！', parent=root)
     elif sid == "":
@@ -241,7 +229,7 @@ v = tk.IntVar()
 e = tk.Entry(root)
 
 tk.Label(text='设置投票方式：').pack(anchor=tk.W)
-tk.Radiobutton(root, text='多线程投票(急速秒票)', variable=v,
+tk.Radiobutton(root, text='多线程投票(极速秒票)', variable=v,
                value=1).pack(anchor=tk.W)
 tk.Radiobutton(root, text='单线程(保险), 设定投票间隔时间(s)(必须大于等于零)：', variable=v,
                value=2).pack(anchor=tk.W)
@@ -276,7 +264,7 @@ S.pack(side=tk.RIGHT, fill=tk.Y)
 T.pack(side=tk.RIGHT, fill=tk.Y)
 S.config(command=T.yview)
 T.config(yscrollcommand=S.set)
-quote = """警告：\n仅供测试使用，不可用于任何非法用途！\n对于使用本代码所造成的一切不良后果，本人将不负任何责任！\n\n说明：支持多线程投票(急速秒票)\n如果想要用此系统为你自己投票，请记下你的投票网站，网址参数中aid和id的值；\n如果长时间无输出响应或者显示不能投票，请检查投票参数是否设置正确，网络连接是否正常；\n投票过程中可以随时修改投票间隔时间！不建议在投票过程中更改其它参数设置！\n\n投票信息:\n"""
+quote = """警告：\n仅供测试使用，不可用于任何非法用途！\n对于使用本代码所造成的一切不良后果，本人将不负任何责任！\n\n说明：支持多线程投票(极速秒票)\n如果想要用此系统为你自己投票，请记下你的投票网站，网址参数中aid和id的值；\n如果长时间无输出响应或者显示不能投票，请检查投票参数是否设置正确，网络连接是否正常；\n投票过程中可以随时修改投票间隔时间！不建议在投票过程中更改其它参数设置！\n\n投票信息:\n"""
 T.insert(tk.END, quote)
 
 root.mainloop()
