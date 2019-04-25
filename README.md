@@ -6,6 +6,10 @@ English Version.(中文版本请下拉)
 
 Extended paper on this project have finally been published! Written independently by myself, this paper presents an original solution to the real security of voting - "Voting System Based on Wechat Pay", which is published in Volume 40, No. 3, page 118-121, at "COMPUTER ENGINEERING & SOFTWARE" journal.
 
+[Link to CNKI](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
+
+[Article view](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
+
 **Classification number: TP309.2**
 
 **Document identification code: A**
@@ -81,6 +85,10 @@ On 25th April,2019 , I fixed some bugs, add Program with UI version.
 
 关于此项目的引申论文终于发表出版了！本论文由本人独立撰写，提出了关于投票真实安全问题的独创解决方案——“基于微信支付平台的在线投票系统”，发表于《软件》杂志第40卷第3期118-121页。
 
+[知网链接](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
+
+[原文查看](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
+
 **分类号: TP309.2**
 
 **文献标识码: A**
@@ -140,6 +148,7 @@ On 25th April,2019 , I fixed some bugs, add Program with UI version.
 ![](UI-pic.PNG)
 
 ## 0x04 附录
+
 [投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
 
 [程序源代码](AutoVoting-for-Yunmai.py)
