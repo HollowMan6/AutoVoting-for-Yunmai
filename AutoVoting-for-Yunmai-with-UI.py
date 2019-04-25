@@ -45,7 +45,7 @@ wlist = ['480', '600', '768', '1050', '1200', '1536', '480', '600', '800',
          '900', '1050', '1200', '1600', '540', '720', '768', '1080', '1440']
 
 
-def vote(host, aid, id):
+def vote(host, aid, id, php):
     global count, threadmax, tset, hlist, wlist, a, quest, T, mul, ind, flag
 # 忽略过程中的网络错误 Ignore network errors during the process
     try:
@@ -53,7 +53,7 @@ def vote(host, aid, id):
         # 目标投票网页参数设置 Target voting page parameter setting
         url1 = host + "/vote.php"
         url2 = host + "/api/createCode.php"
-        user = "1" + ''.join(random.sample('1234567890', 5))
+        user = ''.join(random.sample('1234567890', 6))
         header1 = {
             "User-Agent":
             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.691.400 QQBrowser/9.0.2524.400',
@@ -70,95 +70,100 @@ def vote(host, aid, id):
 
         # 获取随机生成用户的openid Get the openid of the randomly generated user
         html = requests.get(
-            url=host + "/activity_item1.php?aid=" + aid + "&id=" + id +
+            url=host + "/"+php+"?aid=" + aid + "&id=" + id +
             "&userid=" + user,
             headers=header1,
             cookies=cookies,
             verify=False)
         openid = ''.join(re.findall(r'var _xenon = "(.+?)";', html.text))
-
-        # 获取验证码 get verification code
-        header2 = {
-            "User-Agent":
-            'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.691.400 QQBrowser/9.0.2524.400',
-            "Referer":
-            host + "/activity_item1.php?aid=" + aid + "&id=" + id + "&userid="
-            + user + "&orther_openid=" + openid,
-            "Accept":
-            'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-            "Accept-Language":
-            'zh-CN,zh;q=0.9'
-        }
-        code = requests.post(
-            url=url2,
-            data=post1,
-            headers=header2,
-            cookies=cookies,
-            verify=False).text[-9:-2].replace(",", '')
-
-        # 投票 Voting
-        n = random.randint(0, 17)
-        post2 = {
-            'aid': aid,
-            "width": wlist[n],
-            "height": hlist[n],
-            'id': id,
-            'wechatid': user,
-            'orther_id': openid,
-            'xenon': openid,
-            'code': code,
-            'p_time': ptime,
-            'j_time': jtime
-        }
-        vote = requests.post(
-            url=url1,
-            data=post2,
-            headers=header2,
-            cookies=cookies,
-            verify=False).text[25]
-
-        # 判断投票状态 Judging voting status
-        if vote == '2':
-            T.insert(tk.END, "投票失败，可能程序此时使用的账号已经投过票。还将继续为您投票，请稍侯···\n")
-            # Translation: The vote failed. the account used by the program at this time may have voted. The program will continue to vote for you, please wait...
-        elif vote == '0':
-            count += 1
-            T.insert(tk.END, "恭喜您，投票成功，此程序已经为您投票{:}次！\n".format(count))
-            a.set("已经投票 "+str(count)+" 次")
-            # Translation: Congratulations! the vote is successful, this program has already voted for you {:} times!
-        elif vote == '3':
-            ind = True
-            flag = False
-            if quest == False:
-                quest = True
-                flag = False
-                T.insert(tk.END, "投票速度过快，已被系统禁止投票，请稍后再试！\n")
-                # Translation: The voting speed is too fast and has been banned from voting by the system. Please try again later!
-                tkinter.messagebox .showerror(
-                    '错误', '投票速度过快，已被系统禁止投票，请稍后再试！', parent=root)
-        elif vote == '4':
-            ind = True
-            flag = False
-            if quest == False:
-                quest = True
-                T.insert(tk.END, "无法获取验证码，此程序不适用该投票页面！\n")
-                # Translation: Verification code error!
-                tkinter.messagebox .showerror(
-                    '错误', '验证码错误！请检查获取验证码部分代码！', parent=root)
+        if openid == "":
+            return
         else:
-            ind = True
-            flag = False
-            if quest == False:
-                quest = True
-                T.insert(tk.END, "抱歉，不能投票！\n")
-                # Translation: Sorry, can't vote!
-                tkinter.messagebox .showerror('错误', '抱歉，不能投票！', parent=root)
-        if mul == True:
-            threadmax.release()
+            # 获取验证码 get verification code
+            header2 = {
+                "User-Agent":
+                'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.691.400 QQBrowser/9.0.2524.400',
+                "Referer":
+                host + "/"+php+"?aid=" + aid + "&id=" + id + "&userid="
+                + user + "&orther_openid=" + openid,
+                "Accept":
+                'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+                "Accept-Language":
+                'zh-CN,zh;q=0.9'
+            }
+            code = requests.post(
+                url=url2,
+                data=post1,
+                headers=header2,
+                cookies=cookies,
+                verify=False).text[-9:-2].replace(",", '')
 
-        # 设置每次投票间隔时间(可选) Set the interval between each vote (optional)
-        if tset > 0:
-            time.sleep(random.normalvariate(tset, tset/4))
+            # 投票 Voting
+            n = random.randint(0, 17)
+            post2 = {
+                'aid': aid,
+                "width": wlist[n],
+                "height": hlist[n],
+                'id': id,
+                'wechatid': user,
+                'orther_id': openid,
+                'xenon': openid,
+                'code': code,
+                'p_time': ptime,
+                'j_time': jtime
+            }
+            vote = requests.post(
+                url=url1,
+                data=post2,
+                headers=header2,
+                cookies=cookies,
+                verify=False).text[25]
+
+            # 判断投票状态 Judging voting status
+            if vote == '2':
+                T.insert(tk.END, "投票失败，可能程序此时使用的账号已经投过票。还将继续为您投票，请稍侯···\n")
+                # Translation: The vote failed. the account used by the program at this time may have voted. The program will continue to vote for you, please wait...
+            elif vote == '0':
+                count += 1
+                T.insert(tk.END, "恭喜您，投票成功，此程序已经为您投票{:}次！\n".format(count))
+                a.set("已经投票 "+str(count)+" 次")
+                # Translation: Congratulations! the vote is successful, this program has already voted for you {:} times!
+            elif vote == '3':
+                ind = True
+                flag = False
+                if quest == False:
+                    quest = True
+                    T.insert(tk.END, "投票速度过快，已被系统禁止投票，请稍后再试！\n")
+                    # Translation: The voting speed is too fast and has been banned from voting by the system. Please try again later!
+                    tkinter.messagebox .showerror(
+                        '错误', '投票速度过快，已被系统禁止投票，请稍后再试！', parent=root)
+            elif vote == '4':
+                if quest == False and mul == False:
+                    quest = True
+                    flag = False
+                    ind = True
+                    tkinter.messagebox .showerror(
+                        '错误', '验证码错误！(多线程情况下此错误正常！)', parent=root)
+                elif quest == False:
+                    T.insert(tk.END, "验证码错误！(多线程情况下此错误正常！)\n")
+                    # Translation: Verification code error!
+                    
+            else:
+                if quest == False and mul == False:
+                    quest = True
+                    flag = False
+                    ind = True
+                    tkinter.messagebox .showerror(
+                        '错误', '抱歉，不能投票！(可能为网络问题)', parent=root)
+                elif quest == False:
+                    T.insert(tk.END, "抱歉，不能投票！(可能为网络问题)\n")
+                    # Translation: Sorry, can't vote!
+            if mul == True:
+                threadmax.release()
+
+            # 设置每次投票间隔时间(可选) Set the interval between each vote (optional)
+            if tset > 0:
+                time.sleep(random.normalvariate(tset, tset/4))
 
     except Exception:
         if mul == True:
@@ -167,12 +172,12 @@ def vote(host, aid, id):
 
 
 mn = threading.Thread()
-# 定义爬虫线程 Define Spider Thread
 
 
+# 定义投票线程 Define Voting Thread
 def main():
     l = []
-    global shost, sid, said, threadmax, ind, v, mul, mn
+    global shost, sid, said, sphp, threadmax, ind, v, mul, mn
     if v.get() == 1:
         mul = True
         while True:
@@ -180,7 +185,7 @@ def main():
                 return
             # 增加信号量，可用信号量减一 Increase the semaphore and subtract one from the semaphore
             threadmax.acquire()
-            t = threading.Thread(target=vote, args=(shost, sid, said))
+            t = threading.Thread(target=vote, args=(shost, said, sid, sphp))
             t.start()
             l.append(t)
         for t in l:
@@ -190,13 +195,12 @@ def main():
         while True:
             if ind == True:
                 return
-            vote(shost, sid, said)
+            vote(shost, said, sid, sphp)
 
 
 # 开始投票 Start Voting
 def run():
-    global count, tset, flag, ind, quest, e, shost, sid, said, mn, ehost, eid, eaid
-    count = 0
+    global count, tset, flag, ind, quest, e, shost, sid, said, sphp, mn, ehost, eid, eaid, ephp
     tset = 0
     ind = False
     quest = False
@@ -211,16 +215,18 @@ def run():
     shost = ehost.get()
     sid = eid.get()
     said = eaid.get()
+    sphp = ephp.get()
     if shost == "":
         tkinter.messagebox .showerror('错误', '请设定投票网站！', parent=root)
     elif said == "":
-        tkinter.messagebox .showerror('错误', '请设置id！', parent=root)
-    elif sid == "":
         tkinter.messagebox .showerror('错误', '请设置aid！', parent=root)
+    elif sid == "":
+        tkinter.messagebox .showerror('错误', '请设置id！', parent=root)
     elif flag == True:
         tkinter.messagebox .showwarning(
             '警告', '已经在投票中。退出或停止请点击“退出”按钮。', parent=root)
     else:
+        count = 0
         flag = True
         mn = threading.Thread(target=main)
         mn.setDaemon(True)
@@ -230,7 +236,7 @@ def run():
 # Tkinter 界面设定 UI Setting
 root = tk.Tk()
 root.title('AutoVoting for Yunmai -- By Hollow Man')
-root.geometry('500x500')
+root.geometry('500x700')
 v = tk.IntVar()
 e = tk.Entry(root)
 
@@ -245,9 +251,12 @@ sid = ""
 said = ""
 e.pack(anchor=tk.W)
 tk.Label(text='设置投票参数：').pack(anchor=tk.W)
-tk.Label(text='投票网站：').pack(anchor=tk.W)
+tk.Label(text='投票网站(如http://tp.citydatingb.top)：').pack(anchor=tk.W)
 ehost = tk.Entry(root)
 ehost.pack(anchor=tk.W)
+tk.Label(text='投票页面网址中php文件全称(如activity_item1.php)：').pack(anchor=tk.W)
+ephp = tk.Entry(root)
+ephp.pack(anchor=tk.W)
 tk.Label(text='aid(活动)：').pack(anchor=tk.W)
 eaid = tk.Entry(root)
 eaid.pack(anchor=tk.W)
@@ -267,7 +276,7 @@ S.pack(side=tk.RIGHT, fill=tk.Y)
 T.pack(side=tk.RIGHT, fill=tk.Y)
 S.config(command=T.yview)
 T.config(yscrollcommand=S.set)
-quote = """警告：\n仅供测试使用，不可用于任何非法用途！\n对于使用本代码所造成的一切不良后果，本人将不负任何责任！\n\n说明：支持多线程投票(急速秒票)\n如果想要用此系统为你自己投票，请记下你的投票网址host，参数中aid和id的值；\n如果长时间无输出响应，请检查投票参数是否设置正确，网络连接是否正常；\n\n投票信息:\n"""
+quote = """警告：\n仅供测试使用，不可用于任何非法用途！\n对于使用本代码所造成的一切不良后果，本人将不负任何责任！\n\n说明：支持多线程投票(急速秒票)\n如果想要用此系统为你自己投票，请记下你的投票网站，网址参数中aid和id的值；\n如果长时间无输出响应或者显示不能投票，请检查投票参数是否设置正确，网络连接是否正常；\n投票过程中可以随时修改投票间隔时间！不建议在投票过程中更改其它参数设置！\n\n投票信息:\n"""
 T.insert(tk.END, quote)
 
 root.mainloop()
