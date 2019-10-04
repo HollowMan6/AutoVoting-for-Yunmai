@@ -2,6 +2,9 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/context:javascript)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/context:python)
 
 English Version.(中文版本请下拉)
 

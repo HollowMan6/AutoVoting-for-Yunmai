@@ -22,7 +22,7 @@ import re
 import time
 import random
 # 多线程 Multithreading
-import threading
+# import threading
 
 # 初始化计数变量 Initialization count variable
 count = 0
@@ -142,7 +142,6 @@ def vote():
         '''
         threadmax.release()
         '''
-        pass
 
 
 '''

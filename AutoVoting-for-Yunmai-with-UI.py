@@ -26,7 +26,6 @@ import threading
 # 图形界面
 import tkinter as tk
 import tkinter.messagebox
-import ctypes
 
 # 初始化变量 Initialization variable
 count = 0
@@ -154,7 +153,6 @@ def vote(host, aid, id, php):
     except Exception:
         if mul == True:
             threadmax.release()
-        pass
 
 
 mn = threading.Thread()
@@ -174,8 +172,8 @@ def main():
             t = threading.Thread(target=vote, args=(shost, said, sid, sphp))
             t.start()
             l.append(t)
-        for t in l:
-            t.join()
+        for ts in l:
+            ts.join()
     elif v.get() == 2:
         mul = False
         while True:
