@@ -46,6 +46,8 @@
 
 ## 0x01:简介
 
+[Python库依赖](../../network/dependencies)
+
 云麦投票系统自动刷票程序，让你轻松占据榜首。（当然，小心被发现！）
 
 这是[云麦投票系统](http://www.mianfeitoupiao.com/)的链接。
@@ -123,6 +125,8 @@ Welcome for your citation!
 *[Publisher's HomePage](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
 
 ## 0x01:Introduction
+
+[Python Dependencies](../../network/dependencies)
 
 I have coded an AutoVoting program, giving you a chance to be the most popular on YUNMAI VOTING（云麦投票） 
 
