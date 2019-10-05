@@ -1,91 +1,22 @@
-# Auto Voting for Yunmai
+# 云麦投票系统自动刷票程序
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/AutoVoting-for-Yunmai)](../../graphs/commit-activity)
+[![release-date](https://img.shields.io/github/release-date/HollowMan6/AutoVoting-for-Yunmai)](../../releases)
+
+[![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
+[![watchers](https://img.shields.io/github/watchers/HollowMan6/AutoVoting-for-Yunmai?style=social)](../../watchers)
+[![stars](https://img.shields.io/github/stars/HollowMan6/AutoVoting-for-Yunmai?style=social)](../../stargazers)
+[![forks](https://img.shields.io/github/forks/HollowMan6/AutoVoting-for-Yunmai?style=social)](../../stargazers)
+
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://hollowman6.github.io/fund.html)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
+[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/AutoVoting-for-Yunmai.svg)](../../archive/master.zip)
+
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/context:javascript)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/HollowMan6/AutoVoting-for-Yunmai.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/AutoVoting-for-Yunmai/context:python)
 
-English Version.(中文版本请下拉)
-
-## LATEST NEWS!
-
-Extended paper on this project have finally been published! Written independently by myself, this paper presents an original solution to the real security of voting - "Voting System Based on Wechat Pay", which is published in Volume 40, No. 3, page 118-121, at "COMPUTER ENGINEERING & SOFTWARE" journal.
-
-[Link to CNKI](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
-
-[Article view](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
-
-**Classification number: TP309.2**
-
-**Document identification code: A**
-
-**DOI: 10.3969/j.issn.1003-6970.2019.03.022**
-
-**Citation Format: 蒋嵩林. 基于微信支付平台的在线投票系统[J]. 软件, 2019, 40 (3) : 118-121**
-
-Welcome for your citation!
-
-***Introduction of "COMPUTER ENGINEERING & SOFTWARE" journal***
-
-*"COMPUTER ENGINEERING & SOFTWARE" journal is managed by the Chinese Association of Science and Technology and sponsored by the China Electronics Society. It has a long history of publishing excellent scientific and technological journals at home and abroad. It was founded in 1979. It is the first Chinese core journal in China. China International Book Trading Corporation Code : CN12-1151/TP. ISSN 1003-6970. M8992, is the code for international publishing approved by the General Administration of Press and Publication. Meanwhile, the only CD-ROM edition of Software magazine in China is CN12-9203/TP. Software magazine is included in Chinese Academic Journal Comprehensive Evaluation Database Statistical Source Journal, Chinese Core Journal (Selection) Database, Chinese Journal Full Text Database and Chinese Science and Technology Journal Database (Full Text Edition) by domestic and foreign databases.*
-
-***（2018）Impact factor ：1.038***
-
-*[Publisher's HomePage](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
-
-## 0x01:Introduction
-
-I have coded an AutoVoting program, giving you a chance to be the most popular on YUNMAI VOTING（云麦投票） 
-
-Here is their [Voting System](http://www.mianfeitoupiao.com/).
-
-I have joined an competition of our school (Lanzhou University) , which needed voting. So, when the voting started in the afternoon of 20th November,2018. Without any classes to take that time, I started coding.
-
-Such kind of system base on Wechat id combined with openid to vote.
-
-The Voting System is really simple and stupid, because they even don't detect the ip adress and have critical bugs for me to use. With a couple of hours, using Google Chrome and Fiddler, I easily got the code done!(Even though it was my first time to use Python to code on my own!)
-
-## 0x02:How do I handle this
-
- I used Google Chrome to view the source code of voting page(Eventhough JavaScript and HTML are new to me), and then I start to figure out what role the "vote" button played when I tried to vote manually.
-
- After I took the first step, with Fiddler's monitoring, I tried to vote manually. This helped me to confirm that I really understood how the voting system works and nothing was neglected.
-
- Finally, I started to code and debug. 
-
- you have to limit your voting speed at 14.5 s/vote . Otherwise you will be unable to vote for 2 hours after you have vote yourself for 500 votes.
- 
- It turned out to be a success!
-
-## 0x03:Result
-
-That night and next day, I kept voting for myself untill the afternoon, when I found that all my vote was gone. Then I asked the Customer Service.
-
-![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm-en.png)
-![](mmexport1542795832683-en.jpg)
-
-The pictures shows the chat，it turned out to be the pace of the voting that makes them realized the abnormal. The funny thing is that, they thought I buy the voters on Tabao, but the truth is that I vote myself all by my program. HA HA HA...... :)
-
-When I followed her instruction to click into the number 1's voting page, who has votes of over 5000, I thought that they hire a lot of people to vote her on Tabao originally, it really shocked me a lot.There is a link to buy the votes with money officially! and 666 votes cost 100 yuan.The voting system turned out to be a place to show off their whealth! I was disappointed with this competition from then on and decided to give up continue to take part in this activity.
-
-On 6th April,2019 , I add an optional funtion --- multithreading.
-
-On 25th April,2019 , I fixed some bugs, add Program with UI version.
-
-## 0x04:PS
-
-[The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html)
-
-[My Program Source Code](AutoVoting-for-Yunmai.py)
-
-[My Program with UI Source Code](AutoVoting-for-Yunmai-with-UI.py)
-
-[Win UI exe](AutoVoting-for-Yunmai-with-UI.exe)
-
-# 云麦投票系统自动刷票程序
-
-中文版本。
+(English version is down below.)
 
 ## 最新消息!!!
 
@@ -162,3 +93,80 @@ On 25th April,2019 , I fixed some bugs, add Program with UI version.
 [UI版程序源代码](AutoVoting-for-Yunmai-with-UI.py)
 
 [Win UI程序](AutoVoting-for-Yunmai-with-UI.exe)
+
+# Auto Voting for Yunmai
+
+## LATEST NEWS!
+
+Extended paper on this project have finally been published! Written independently by myself, this paper presents an original solution to the real security of voting - "Voting System Based on Wechat Pay", which is published in Volume 40, No. 3, page 118-121, at "COMPUTER ENGINEERING & SOFTWARE" journal.
+
+[Link to CNKI](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
+
+[Article view](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
+
+**Classification number: TP309.2**
+
+**Document identification code: A**
+
+**DOI: 10.3969/j.issn.1003-6970.2019.03.022**
+
+**Citation Format: 蒋嵩林. 基于微信支付平台的在线投票系统[J]. 软件, 2019, 40 (3) : 118-121**
+
+Welcome for your citation!
+
+***Introduction of "COMPUTER ENGINEERING & SOFTWARE" journal***
+
+*"COMPUTER ENGINEERING & SOFTWARE" journal is managed by the Chinese Association of Science and Technology and sponsored by the China Electronics Society. It has a long history of publishing excellent scientific and technological journals at home and abroad. It was founded in 1979. It is the first Chinese core journal in China. China International Book Trading Corporation Code : CN12-1151/TP. ISSN 1003-6970. M8992, is the code for international publishing approved by the General Administration of Press and Publication. Meanwhile, the only CD-ROM edition of Software magazine in China is CN12-9203/TP. Software magazine is included in Chinese Academic Journal Comprehensive Evaluation Database Statistical Source Journal, Chinese Core Journal (Selection) Database, Chinese Journal Full Text Database and Chinese Science and Technology Journal Database (Full Text Edition) by domestic and foreign databases.*
+
+***（2018）Impact factor ：1.038***
+
+*[Publisher's HomePage](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
+
+## 0x01:Introduction
+
+I have coded an AutoVoting program, giving you a chance to be the most popular on YUNMAI VOTING（云麦投票） 
+
+Here is their [Voting System](http://www.mianfeitoupiao.com/).
+
+I have joined an competition of our school (Lanzhou University) , which needed voting. So, when the voting started in the afternoon of 20th November,2018. Without any classes to take that time, I started coding.
+
+Such kind of system base on Wechat id combined with openid to vote.
+
+The Voting System is really simple and stupid, because they even don't detect the ip adress and have critical bugs for me to use. With a couple of hours, using Google Chrome and Fiddler, I easily got the code done!(Even though it was my first time to use Python to code on my own!)
+
+## 0x02:How do I handle this
+
+ I used Google Chrome to view the source code of voting page(Eventhough JavaScript and HTML are new to me), and then I start to figure out what role the "vote" button played when I tried to vote manually.
+
+ After I took the first step, with Fiddler's monitoring, I tried to vote manually. This helped me to confirm that I really understood how the voting system works and nothing was neglected.
+
+ Finally, I started to code and debug. 
+
+ you have to limit your voting speed at 14.5 s/vote . Otherwise you will be unable to vote for 2 hours after you have vote yourself for 500 votes.
+ 
+ It turned out to be a success!
+
+## 0x03:Result
+
+That night and next day, I kept voting for myself untill the afternoon, when I found that all my vote was gone. Then I asked the Customer Service.
+
+![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm-en.png)
+![](mmexport1542795832683-en.jpg)
+
+The pictures shows the chat，it turned out to be the pace of the voting that makes them realized the abnormal. The funny thing is that, they thought I buy the voters on Tabao, but the truth is that I vote myself all by my program. HA HA HA...... :)
+
+When I followed her instruction to click into the number 1's voting page, who has votes of over 5000, I thought that they hire a lot of people to vote her on Tabao originally, it really shocked me a lot.There is a link to buy the votes with money officially! and 666 votes cost 100 yuan.The voting system turned out to be a place to show off their whealth! I was disappointed with this competition from then on and decided to give up continue to take part in this activity.
+
+On 6th April,2019 , I add an optional funtion --- multithreading.
+
+On 25th April,2019 , I fixed some bugs, add Program with UI version.
+
+## 0x04:PS
+
+[The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html)
+
+[My Program Source Code](AutoVoting-for-Yunmai.py)
+
+[My Program with UI Source Code](AutoVoting-for-Yunmai-with-UI.py)
+
+[Windows UI exe](AutoVoting-for-Yunmai-with-UI.exe)
