@@ -18,6 +18,8 @@
 
 (English version is down below.)
 
+***注意：我们学校自媒体兰小e于2019年4月22日报道了这样一篇文章：[遇到这样的投票活动需要警惕](https://mp.weixin.qq.com/s?__biz=MzA4MTk1NDAzOA==&mid=2653775571&idx=2&sn=f20e4c06e74509eed027666bc482a447&chksm=8454d34ab3235a5ce0e90af10624b034e56291f89653e51a605a0ccc4269a598e0e02d0ac26b&mpshare=1&scene=22&srcid=1016BWf7zLa4vbYxXqFMBM4x&sharer_sharetime=1571203044591&sharer_shareid=810f66eeff1cb358c0ce3ae749467517#rd)，此类可以大规模刷礼物送票的投票活动均为坑钱的活动，请勿在这类投票活动中花钱刷礼物。***
+
 ## 最新消息!!!
 
 关于此项目的引申论文终于发表出版了！本论文由本人独立撰写，提出了关于投票真实安全问题的独创解决方案——“基于微信支付平台的在线投票系统”，发表于《软件》杂志第40卷第3期118-121页。
@@ -97,6 +99,8 @@
 [Win UI程序](AutoVoting-for-Yunmai-with-UI.exe)
 
 # Auto Voting for Yunmai
+
+***Attention！Our university student media “兰小e” writes an article: [you should be careful to such kind og voting activities(in Chinese)](https://mp.weixin.qq.com/s?__biz=MzA4MTk1NDAzOA==&mid=2653775571&idx=2&sn=f20e4c06e74509eed027666bc482a447&chksm=8454d34ab3235a5ce0e90af10624b034e56291f89653e51a605a0ccc4269a598e0e02d0ac26b&mpshare=1&scene=22&srcid=1016BWf7zLa4vbYxXqFMBM4x&sharer_sharetime=1571203044591&sharer_shareid=810f66eeff1cb358c0ce3ae749467517#rd) on April 22, 2019. Such kind of activities are all fake, please DO NOT spend any money on those activities.***
 
 ## LATEST NEWS!
 
