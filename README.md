@@ -18,9 +18,11 @@
 
 (English version is down below.)
 
+该[钻石投票平台](http://www.mianfeitoupiao.com/)现在已经被封了，此程序也无用武之地了，所以作为我写的第一个爬虫程序，谨以此仓库作纪念。
+
 ***注意：我们学校自媒体兰小e于2019年4月22日报道了这样一篇文章：[遇到这样的投票活动需要警惕](https://mp.weixin.qq.com/s?__biz=MzA4MTk1NDAzOA==&mid=2653775571&idx=2&sn=f20e4c06e74509eed027666bc482a447&chksm=8454d34ab3235a5ce0e90af10624b034e56291f89653e51a605a0ccc4269a598e0e02d0ac26b&mpshare=1&scene=22&srcid=1016BWf7zLa4vbYxXqFMBM4x&sharer_sharetime=1571203044591&sharer_shareid=810f66eeff1cb358c0ce3ae749467517#rd)，此类可以大规模刷礼物送票的投票活动均为坑钱的活动，请勿在这类投票活动中花钱刷礼物。***
 
-## 最新消息!!!
+## 最新消息
 
 关于此项目的引申论文终于发表出版了！本论文由本人独立撰写，提出了关于投票真实安全问题的独创解决方案——“基于微信支付平台的在线投票系统”，发表于《软件》杂志第40卷第3期118-121页。
 
@@ -46,7 +48,7 @@
 
 *[杂志社主页](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
 
-## 0x01:简介
+## 简介
 
 [Python库依赖](../../network/dependencies)
 
@@ -60,7 +62,7 @@
 
 投票系统非常简单和愚蠢，因为他们甚至没有检测IP地址，并且有重要的设计缺陷供我利用。（具体缺陷请参考代码与代码中的注释，以及附录提供的样例页面） 使用Google Chrome和Fiddler几个小时后，我轻松完成了代码的编写！（即使这是我第一次使用Python自行设计程序！）
 
-## 0x02：我的方法
+## 我的方法
 
 我首先使用谷歌浏览器（F12）来查看投票页面的源代码（尽管JavaScript和HTML我并不熟悉），然后我开始弄清楚当我尝试手动投票时“投票”按钮的作用。
 
@@ -72,11 +74,11 @@
  
 最后我成功了！
 
-## 0x03：结果
+## 结果
 
 那天晚上和第二天，我一直运行着程序，为自己投票，直到下午，我发现我的所有投票都没有了。然后我问了客服。
-![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm.png)
-![](mmexport1542795832683.jpg)
+![](Pics/Screenshot_2018-11-21-18-19-28-072_com.tencent.mm.png)
+![](Pics/mmexport1542795832683.jpg)
 
 从上图可知，是投票的速度暴露了我。但是，他们认为我在淘宝买了刷票的，然而我是靠自己的技术攻破的。太好笑了······ :)
 
@@ -86,9 +88,9 @@
 
 2019年4月25日，修复一些错误。添加 UI 界面版程序:
 
-![](UI-pic.PNG)
+![](Pics/UI-pic.PNG)
 
-## 0x04 附录
+## 附录
 
 [投票网页 HTML/源代码(本地)(第一名的投票地址)](觅冬.html)
 
@@ -96,13 +98,15 @@
 
 [UI版程序源代码](AutoVoting-for-Yunmai-with-UI.py)
 
-[Win UI程序](AutoVoting-for-Yunmai-with-UI.exe)
+[Win UI程序](Excutables/AutoVoting-for-Yunmai-with-UI.exe)
 
 # Auto Voting for Yunmai
 
+This [Voting platform] (http://www.mianfeitoupiao.com/) is now closed, so this programme is now useless. Therefore, as the first crawler program I coded, I would like to use this repository as a memorial.
+
 ***Attention！Our university student media “兰小e” writes an article: [you should be careful to such kind og voting activities(in Chinese)](https://mp.weixin.qq.com/s?__biz=MzA4MTk1NDAzOA==&mid=2653775571&idx=2&sn=f20e4c06e74509eed027666bc482a447&chksm=8454d34ab3235a5ce0e90af10624b034e56291f89653e51a605a0ccc4269a598e0e02d0ac26b&mpshare=1&scene=22&srcid=1016BWf7zLa4vbYxXqFMBM4x&sharer_sharetime=1571203044591&sharer_shareid=810f66eeff1cb358c0ce3ae749467517#rd) on April 22, 2019. Such kind of activities are all fake, please DO NOT spend any money on those activities.***
 
-## LATEST NEWS!
+## LATEST NEWS
 
 Extended paper on this project have finally been published! Written independently by myself, this paper presents an original solution to the real security of voting - "Voting System Based on Wechat Pay", which is published in Volume 40, No. 3, page 118-121, at "COMPUTER ENGINEERING & SOFTWARE" journal.
 
@@ -128,7 +132,7 @@ Welcome for your citation!
 
 *[Publisher's HomePage](http://www.rjzz.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=RJZZ)*
 
-## 0x01:Introduction
+## Introduction
 
 [Python Dependencies](../../network/dependencies)
 
@@ -142,7 +146,7 @@ Such kind of system base on Wechat id combined with openid to vote.
 
 The Voting System is really simple and stupid, because they even don't detect the ip adress and have critical bugs for me to use. With a couple of hours, using Google Chrome and Fiddler, I easily got the code done!(Even though it was my first time to use Python to code on my own!)
 
-## 0x02:How do I handle this
+## How did I handle this
 
  I used Google Chrome to view the source code of voting page(Eventhough JavaScript and HTML are new to me), and then I start to figure out what role the "vote" button played when I tried to vote manually.
 
@@ -154,12 +158,12 @@ The Voting System is really simple and stupid, because they even don't detect th
  
  It turned out to be a success!
 
-## 0x03:Result
+## Result
 
 That night and next day, I kept voting for myself untill the afternoon, when I found that all my vote was gone. Then I asked the Customer Service.
 
-![](Screenshot_2018-11-21-18-19-28-072_com.tencent.mm-en.png)
-![](mmexport1542795832683-en.jpg)
+![](Pics/Screenshot_2018-11-21-18-19-28-072_com.tencent.mm-en.png)
+![](Pics/mmexport1542795832683-en.jpg)
 
 The pictures shows the chat，it turned out to be the pace of the voting that makes them realized the abnormal. The funny thing is that, they thought I buy the voters on Tabao, but the truth is that I vote myself all by my program. HA HA HA...... :)
 
@@ -169,7 +173,7 @@ On 6th April,2019 , I add an optional funtion --- multithreading.
 
 On 25th April,2019 , I fixed some bugs, add Program with UI version.
 
-## 0x04:PS
+## PS
 
 [The Voting Page HTML/Source Code(Local)(the NO.1's Voting Page)](觅冬.html)
 
@@ -177,4 +181,4 @@ On 25th April,2019 , I fixed some bugs, add Program with UI version.
 
 [My Program with UI Source Code](AutoVoting-for-Yunmai-with-UI.py)
 
-[Windows UI exe](AutoVoting-for-Yunmai-with-UI.exe)
+[Windows UI Programme](Excutables/AutoVoting-for-Yunmai-with-UI.exe)

@@ -159,8 +159,8 @@ while True:
     t = threading.Thread(target=vote)
     t.start()
     l.append(t)
-for t in l:
-    t.join()
+    for t in l:
+        t.join()
 '''
 while True:
     if ind == True:

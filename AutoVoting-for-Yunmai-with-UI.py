@@ -172,8 +172,8 @@ def main():
             t = threading.Thread(target=vote, args=(shost, said, sid, sphp))
             t.start()
             l.append(t)
-        for ts in l:
-            ts.join()
+            for ts in l:
+                ts.join()
     elif v.get() == 2:
         mul = False
         while True:
