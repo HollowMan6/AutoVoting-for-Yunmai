@@ -28,7 +28,7 @@
 
 [知网链接](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
 
-[原文查看](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
+[原文查看](https://hollowman6.github.io/Publications/?id=0)
 
 **分类号: TP309.2**
 
@@ -112,7 +112,7 @@ Extended paper on this project have finally been published! Written independentl
 
 [Link to CNKI](http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&filename=RJZZ201903023&dbname=CJFDPREP&uid=WEEvREcwSlJHSldRa1FhdkJkVG1BVmpVai8vVGU1U0ZiWnIxRUJTWVZ6cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!)
 
-[Article view](基于微信支付平台的在线投票系统_蒋嵩林.pdf)
+[Article view](https://hollowman6.github.io/Publications/?id=0)
 
 **Classification number: TP309.2**
 
