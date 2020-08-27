@@ -2,6 +2,7 @@
 
 [![last-commit](https://img.shields.io/github/last-commit/HollowMan6/AutoVoting-for-Yunmai)](../../graphs/commit-activity)
 [![release-date](https://img.shields.io/github/release-date/HollowMan6/AutoVoting-for-Yunmai)](../../releases)
+![Python package](https://github.com/HollowMan6/AutoVoting-for-Yunmai/workflows/Python%20package/badge.svg)
 
 [![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
 [![watchers](https://img.shields.io/github/watchers/HollowMan6/AutoVoting-for-Yunmai?style=social)](../../watchers)
